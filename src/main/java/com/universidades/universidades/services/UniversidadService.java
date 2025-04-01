@@ -3,6 +3,9 @@ package com.universidades.universidades.services;
 import com.universidades.universidades.dto.UniversidadDto;
 import com.universidades.universidades.persistence.entities.Universidad;
 import com.universidades.universidades.persistence.repositories.UniversidadRepository;
+
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,5 +24,9 @@ public class UniversidadService {
         universidad.setTelefono(universidadDto.telefono());
         
         return universidadRepository.save(universidad);
+    }
+
+    public List<Universidad> listarTodas() {
+        return universidadRepository.findAll();
     }
 }
