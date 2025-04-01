@@ -9,7 +9,6 @@ import lombok.Setter;
 @Table (name = "universidades" )
 @Getter
 @Setter
-@NoArgsConstructor
 public class Universidad {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
